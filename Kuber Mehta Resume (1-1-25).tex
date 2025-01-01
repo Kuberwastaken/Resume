@@ -1,0 +1,161 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{hyperref}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=black,        
+    citecolor=black,
+    pdfborderstyle={/S/U/W 1} % Underlines the links instead of a box
+}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Kuber Mehta} & Email: \href{mailto:kuberhob@gmail.com}{kuberhob@gmail.com} \\
+  \href{https://kuberwastaken.github.io/}{kuberwastaken.github.io} & Mobile: +91 9625079109 \\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section*{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Birla Institute of Technology and Science, Pilani}{Pilani, India}
+    {Bachelor of Science in Computer Science}{Aug 2024 -- 2027}
+  \resumeSubheading
+    {Dr. Akhilesh Das Institute of Professional Studies}{New Delhi, India}
+    {Bachelor of Technology in Artificial Intelligence and Data Science}{Aug 2024 -- 2028}
+\resumeSubHeadingListEnd
+
+%-----------COURSES------------------
+\section*{Courses}
+\begin{itemize}[leftmargin=0.15in]
+  \item \textbf{Google Data Analytics Specialization} \hfill \textit{Google}\\
+  \begin{itemize}[leftmargin=0.2in]
+    \item Gained proficiency in data cleaning, analysis, and visualization.
+    \item Used tools like SQL, Tableau, and R to derive insights and create dashboards.
+    \item Completed hands-on assessments simulating real-world data analysis scenarios.
+  \end{itemize}
+
+  \item \textbf{Databases for Data Scientists Specialization} \hfill \textit{University of Colorado Boulder}\\
+  \begin{itemize}[leftmargin=0.2in]
+    \item Mastered relational database design and advanced SQL for data manipulation.
+    \item Worked with Google BigQuery for analyzing and querying large datasets.
+    \item Studied emerging database trends, including NoSQL and distributed databases.
+  \end{itemize}
+
+  \item \textbf{AI-Powered Data Analysis} \hfill \textit{University of Michigan}\\
+  \begin{itemize}[leftmargin=0.2in]
+    \item Applied machine learning algorithms to enhance data analysis processes.
+    \item Integrated Python and AI frameworks for building predictive models.
+    \item Explored methodologies to uncover actionable insights from complex datasets.
+  \end{itemize}
+\end{itemize}
+
+%-----------PROJECTS-----------------
+\section*{Projects}
+\resumeSubHeadingListStart
+  \resumeItem{\href{https://github.com/Kuberwastaken/TREAT-CS50}{TREAT}}{Developed an AI web application built with Flask and Python to analyze movie and show scripts for potential triggers.}
+  \resumeItem{\href{https://www.kaggle.com/code/kubermehta/books-reimagined-diary-of-a-wimpy-kid-by-rodrick}{Books Reimagined}}{Developed an AI-powered tool using Google Gemini 1.5 API to transform narrative perspectives in books, enabling character-specific rewrites for any literature.}
+  \resumeItem{\href{https://github.com/Kuberwastaken/ROOP-AI-Deepfakes}{ROOP AI Deepfakes}}{Integrated the ROOP AI deepfake model into Google Colab, enabling free, platform-independent video generation in under 7 minutes.}
+  \resumeItem{\href{https://github.com/Kuberwastaken/Github-Art}{Github Art}}{Created a tool to make pixel art in GitHub commit history.}
+\resumeSubHeadingListEnd
+
+%-----------COMPETETIONS-----------------
+\section*{Competitions}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Roblox DevRel International Gamejam}{Roblox}
+    {Best Simulator Game}{}
+    \resumeItemListStart
+      \item Won 'Best Simulator' in this game jam by Roblox DevRel Spain, competing against over 7,000 developers worldwide with my game 'Candies Simulator.' 
+      \item Awarded a rare virtual item, recognizing my achievement in a highly competitive event.
+    \resumeItemListEnd
+  
+  \resumeSubheading
+    {Concours Romain Rolland, Delhi}{Alliance Française de Normandie, France}
+    {Gold Medalist}{}
+    \resumeItemListStart
+      \item Awarded the State-Level Gold Medal in the prestigious Concours Romain Rolland French Olympiad, representing Delhi, India.
+      \item Recognized for excellence in French language and cultural proficiency.
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%--------PROGRAMMING SKILLS------------
+\section*{Programming Skills}
+\resumeSubHeadingListStart
+  \item{
+    \textbf{Languages}{: SQL, C, CSS, Python, JavaScript}
+    \hfill
+    \textbf{Technologies}{: React, Node, BigQuery, Tableau, Git}
+  }
+\resumeSubHeadingListEnd
+
+
+\end{document}
