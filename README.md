@@ -1,4 +1,4 @@
-### My Resume
+# Kuber Mehta's Resume
 
 This repository serves as a version-controlled system for my professional resume. By treating my resume as a project in Git, I am able to maintain a history of changes, ensuring that the most up-to-date version is always available. Each time I make updates or revisions to my resume, I simply commit and push the changes to this repository. This allows me to have a consistent and automated way of managing and sharing my resume.
 
@@ -12,7 +12,9 @@ The setup here provides a seamless experience for me to share my resume with any
 
 ---
 
-### Key Enhancements:
+## Key Enhancements:
 - **Version Control**: The repository tracks all changes made to the resume, making it easy to review past versions and updates.
+
 - **Automated Updates**: Instead of manually updating my resume across multiple platforms, a single update to this repository ensures the latest version is available everywhere.
+
 - **GitHub Pages**: The resume is hosted on a personal website through GitHub Pages, making it easy to access and share with others.
