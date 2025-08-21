@@ -8,7 +8,7 @@ The setup here provides a seamless experience for me to share my resume with any
 
 ## You can view the most recent version of my resume at the following link:
 
-[Click here to view my Resume](https://kuberwastaken.github.io/Resume/)
+[Click here to view my Resume](https://resume.kuber.studio)
 
 ---
 
