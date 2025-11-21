@@ -9,12 +9,3 @@ The setup here provides a seamless experience for me to share my resume with any
 ## You can view the most recent version of my resume at the following link:
 
 [Click here to view my Resume](https://resume.kuber.studio)
-
----
-
-## Key Enhancements:
-- **Version Control**: The repository tracks all changes made to the resume, making it easy to review past versions and updates.
-
-- **Automated Updates**: Instead of manually updating my resume across multiple platforms, a single update to this repository ensures the latest version is available everywhere.
-
-- **GitHub Pages**: The resume is hosted on a personal website through GitHub Pages, making it easy to access and share with others.
