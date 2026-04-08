@@ -1,5 +1,8 @@
 \documentclass[letterpaper,11pt]{article}
 
+\usepackage{cmap}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \usepackage{fontawesome5}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -30,13 +33,13 @@
 \usepackage{xcolor}
 \usepackage{contour}
 \usepackage{ulem}
-\definecolor{linkgrey}{gray}{0.7}
+\definecolor{linknavy}{RGB}{0, 51, 102}  % Dark navy, not bright blue
 \definecolor{skillgrey}{gray}{0.35}
 \renewcommand{\ULdepth}{2.5pt}
 \renewcommand{\ULthickness}{0.3pt}
 \contourlength{0.8pt}
 \let\oldhref\href
-\renewcommand{\href}[2]{\oldhref{#1}{\textcolor{linkgrey}{\uline{\textcolor{black}{#2}}}}}
+\renewcommand{\href}[2]{\oldhref{#1}{\textcolor{linknavy}{\uline{#2}}}}
 
 \usepackage{setspace}
 \setstretch{1.02}   % try 1.03–1.10 for small, clean spacing increase
@@ -140,28 +143,28 @@
 \resumeSubHeadingListStart
 
   \resumeProjectHeading
-    {\textbf{\href{https://github.com/Kuberwastaken/claurst}{Claurst}} $|$ \emph{\textcolor{skillgrey}{Rust, TypeScript, Claude Code, Codex, Multi-Provider API Harnesses}}}{}
+    {\textbf{\href{https://github.com/Kuberwastaken/claurst}{Claurst}} $|$ \textit{\textcolor{skillgrey}{Rust, TypeScript, Claude Code, Codex, Multi-Provider API Harnesses}}}{}
     \begin{itemize}[leftmargin=0.05in, label={}, topsep=3pt]
       \item \textbf{8,000+ GitHub stars in under 7 days.} Featured on \href{https://decrypt.co/362917/anthropic-accidentally-leaked-claude-code-source-internet-keeping-forever}{Decrypt.} A \textbf{Rust reimplementation of Claude Code's behavior} from its system prompt spec — better UI, \textbf{multi-provider support}, enhanced privacy, and more.
     \end{itemize}
     \vspace{0.7pt}
 
   \resumeProjectHeading
-    {\textbf{\href{https://github.com/Kuberwastaken/backdooms}{The Backdooms}} $|$ \emph{\textcolor{skillgrey}{JavaScript, Canvas API, Code Minification, Compression Algorithms, DecompressionStream API}}}{}
+    {\textbf{\href{https://github.com/Kuberwastaken/backdooms}{The Backdooms}} $|$ \textit{\textcolor{skillgrey}{JavaScript, Canvas API, Code Minification, Compression Algorithms, DecompressionStream API}}}{}
     \begin{itemize}[leftmargin=0.05in, label={}, topsep=3pt]
       \item \textbf{Top Hacker News post for 3 days (600+ upvotes).} Covered by \href{https://www.pcgamer.com/hardware/behold-a-single-qr-code-containing-a-miniaturized-take-on-doom-literally-the-entire-game/}{PC Gamer} and \href{https://www.techspot.com/news/107642-doom-can-now-run-self-contained-qr-code.html}{TechSpot}, \textit{cited in an ex-NASA Scientist's research paper} \href{https://arxiv.org/pdf/2506.11008}{(arXiv:2506.11008)}. Ported a version of DOOM inspired by the Backrooms, \textbf{self-contained in a QR code}, with a \textbf{custom compression pipeline}.
     \end{itemize}
     \vspace{0.7pt}
 
   \resumeProjectHeading
-    {\textbf{\href{https://github.com/kuberwastaken/meow}{.MEOW Image Format}} $|$ \emph{\textcolor{skillgrey}{Python, PNG Binary Spec, Custom Steganographic Encoding, JavaScript}}}{}
+    {\textbf{\href{https://github.com/kuberwastaken/meow}{.MEOW Image Format}} $|$ \textit{\textcolor{skillgrey}{Python, PNG Binary Spec, Custom Steganographic Encoding, JavaScript}}}{}
     \begin{itemize}[leftmargin=0.05in, label={}, topsep=3pt]
       \item \textbf{Reached Hacker News front page}, adopted \textbf{on-chain by two exchanges}, tokenized with \textbf{\$250k liquidity in 3 nights} — royalties funded my entire university tuition. Developed a \textbf{steganographic, PNG-compatible} image format with \textbf{650+ hidden bytes}.
     \end{itemize}
     \vspace{0.7pt}
 
   \resumeProjectHeading
-    {\textbf{\href{https://clawx.kuber.studio}{ClawX}} $|$ \emph{\textcolor{skillgrey}{Next.js, AI Agent Skills, MCP, SSR, LLM APIs, Programmatic SEO}}}{}
+    {\textbf{\href{https://clawx.kuber.studio}{ClawX}} $|$ \textit{\textcolor{skillgrey}{Next.js, AI Agent Skills, MCP, SSR, LLM APIs, Programmatic SEO}}}{}
     \begin{itemize}[leftmargin=0.05in, label={}, topsep=3pt]
       \item \textbf{85,000+ dynamically rendered pages.} \href{https://www.independent.co.uk/tech/moltbook-ai-reddit-social-media-chat-b2915460.html}{Featured by The Independent.} Built the human interface for \textbf{MoltBook} (Social Network for AI Agents), modelled after Twitter, with AI Agent browsing modes — doubles as a \textbf{pSEO aggregator}.
     \end{itemize}
