@@ -1,4 +1,4 @@
-\documentclass[letterpaper,10.9pt]{article}
+\documentclass[letterpaper,11pt]{article}
 
 \usepackage{fontawesome5}
 \usepackage{latexsym}
@@ -19,11 +19,19 @@
     pdfborderstyle={/S/U/W 1}
 }
 
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
 % Add thin grey underline to all hyperlinks
 \usepackage{xcolor}
 \usepackage{contour}
 \usepackage{ulem}
 \definecolor{linkgrey}{gray}{0.7}
+\definecolor{skillgrey}{gray}{0.35}
 \renewcommand{\ULdepth}{2.5pt}
 \renewcommand{\ULthickness}{0.3pt}
 \contourlength{0.8pt}
@@ -31,7 +39,7 @@
 \renewcommand{\href}[2]{\oldhref{#1}{\textcolor{linkgrey}{\uline{\textcolor{black}{#2}}}}}
 
 \usepackage{setspace}
-\setstretch{1.1}   % try 1.03–1.10 for small, clean spacing increase
+\setstretch{1.02}   % try 1.03–1.10 for small, clean spacing increase
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -44,7 +52,7 @@
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1.25in}
 \addtolength{\topmargin}{-0.75in}
-\addtolength{\textheight}{1.5in}
+\addtolength{\textheight}{1.75in}
 
 \urlstyle{same}
 \raggedbottom
@@ -101,53 +109,66 @@
     \vspace{-2pt}
     \begin{itemize}[leftmargin=*, itemsep=1pt]
       \item Handpicked as \textbf{1 of 8 AI Developers} from \textbf{18,000+ global applicants} by \textbf{Nuseir Yassin (Nas Daily)}.
-      \item Shipped \textbf{4 projects in 4 weeks}, including an experimental \textbf{AI trained on Religious Texts.} Learned \textbf{Growth and Content} while living in a \textbf{month-long Hacker Villa}.
+      \item Shipped \textbf{4 projects in 4 weeks}, including an experimental \textbf{AI finetuned on Religious Texts} for constrained philosophical voices. Learned \textbf{Growth and Content} while living in a \textbf{month-long Hacker Villa}.
     \end{itemize}
   \item
     \textbf{\href{https://www.perplexity.ai/business-fellowship}{Perplexity}} — \textit{AI Business Fellow} \hfill \textnormal{San Francisco, USA, Remote | Mar 2025 -- Aug 2025}
     \vspace{-2pt}
     \begin{itemize}[leftmargin=*, itemsep=1pt]
-      \item Selected for a \textbf{competitive global fellowship} developing \textbf{AI strategy and GTM expertise} for Enterprise AI, with mentorship from \textbf{NVIDIA's Jensen Huang} and \textbf{Box's Aaron Levie}.
+      \item Selected for a \textbf{competitive global fellowship} developing \textbf{AI strategy and GTM expertise} for Enterprise AI and mentored by \textbf{NVIDIA's Jensen Huang} and \textbf{Box's Aaron Levie}.
       \item Contributed to \textbf{AI monetization strategies} and \textbf{SLM deployment research} through GTM experiments for AI-driven knowledge work.
     \end{itemize}
 \resumeSubHeadingListEnd
 
 
 \section*{Recognition}
+\begin{small}
 \resumeSubHeadingListStart
 
-\item\textbf{AI Venture Builder} — Founder of \textbf{\href{https://www.polyth.ink/}{PolyThink Labs}} (Building Generative UI for LLMs) and previously founded \textbf{TREAT AI}, (Open-Core ML platform with \textbf{40+ contributors} using \textbf{25+ fine-tuned LLMs} for content safety).
+\item\textbf{AI Venture Builder} — Founder of \textbf{\href{https://www.polyth.ink/}{PolyThink Labs}} (Building Generative UI for LLMs) and previously founded \textbf{TREAT AI}, (Open-Core ML platform with \textbf{40+ contributors} finetuning \textbf{25+ LLMs \& VLM Pipelines} for content safety).
 
-\item\textbf{\href{https://www.linkedin.com/feed/update/urn:li:activity:7322867944181399552/}{OpenAI OSS Model Closed feedback (APAC devs)}} — Shared my insights working with \textbf{SLMs (Small Language Models)} on a call with \textbf{Sam Altman and the OpenAI team}, providing feedback on their \textbf{SOTA Open Weight models} \textbf{(GPT OSS 20B, 120B)}.
+\item\textbf{\href{https://www.linkedin.com/feed/update/urn:li:activity:7322867944181399552/}{OpenAI OSS Model Closed feedback (APAC devs)}} — Shared insights working with \textbf{SLMs (Small Language Models)} on TREAT a call with \textbf{Sam Altman and the OpenAI team}, providing feedback on their \textbf{SOTA Open Weight models} \textbf{(GPT OSS 20B, 120B)}.
 
 \item \textbf{GitHub Copilot Backstage Pass Program} — Part of an \textbf{invite-only channel} with direct access to GitHub, \& Copilot teams and early access to \textbf{latest models and features} to test \& provide  feedback before releases. 
 
-\item \textbf{\href{https://playground.nothing.tech/lab}{Nothing Essential Lab S1 Winner}} — Tired of the Hacker News mobile experience, I built a \textbf{HN client as a Nothing Widget} (Essential App) using official HN \& Algolia APIs. \textbf{Top 5 of 30,000+ participants}, won a Nothing Phone 3.
+\item \textbf{\href{https://playground.nothing.tech/lab}{Nothing Essential Lab Hackathon Winner}} — Tired of the Hacker News mobile experience, I built a \textbf{HN client as a Nothing Essential App} using official HN \& Algolia APIs. \textbf{Top 5 of 30,000+ participants}, won a Nothing Phone 3.
 
 \resumeSubHeadingListEnd
+\end{small}
 \section*{Projects}
+\begin{small}
 \resumeSubHeadingListStart
-\resumeItem{\href{https://github.com/Kuberwastaken/claurst}{Claurst}}{\textbf{8,000+ GitHub stars in under 7 days.} A \textbf{Rust reimplementation of Claude Code's behavior} from its system prompt spec — featuring better UI, \textbf{multi-provider support}, enhanced privacy, and additional capabilities. Featured on \href{https://decrypt.co/362917/anthropic-accidentally-leaked-claude-code-source-internet-keeping-forever}{Decrypt.}}
-  \vspace{5pt}
-\resumeItem{\href{https://github.com/Kuberwastaken/backdooms}{The Backdooms}}{Ported a version of DOOM inspired by the Backrooms, \textbf{self-contained in a QR code}, with a \textbf{custom compression pipeline}. Covered by \href{https://www.pcgamer.com/hardware/behold-a-single-qr-code-containing-a-miniaturized-take-on-doom-literally-the-entire-game/}{PC Gamer} and \href{https://www.techspot.com/news/107642-doom-can-now-run-self-contained-qr-code.html}{TechSpot}, \textit{cited in an ex-NASA Scientist's research paper} \href{https://arxiv.org/pdf/2506.11008}{(arXiv:2506.11008)}. \textbf{Top Hacker News post for 3 days (600+ upvotes)}.}
-  \vspace{5pt}
-\resumeItem{\href{https://github.com/kuberwastaken/meow}{.MEOW Image Format}}{Developed a \textbf{steganographic,} \textbf{PNG-compatible} image format with \textbf{650+ hidden bytes}. Reached \textbf{Hacker News front page}, adopted \textbf{on-chain by two exchanges}, and got tokenized with \textbf{\$250k liquidity in 3 nights}. Royalties funded my entire university tuition.}
-  \vspace{5pt}
-\resumeItem{\href{https://clawx.kuber.studio}{ClawX}}{Built the human interface for \textbf{MoltBook} (Social Network for AI Agents), modelled after Twitter, with AI Agent browsing modes and a Skill. Doubles as a \textbf{pSEO aggregator} with \textbf{85,000+ dynamically rendered pages}. \href{https://www.independent.co.uk/tech/moltbook-ai-reddit-social-media-chat-b2915460.html}{Featured by The Independent}}
-\resumeSubHeadingListEnd
 
+  \resumeProjectHeading
+    {\textbf{\href{https://github.com/Kuberwastaken/claurst}{Claurst}} $|$ \emph{\textcolor{skillgrey}{Rust, TypeScript, Claude Code, Codex, Multi-Provider API Harnesses}}}{}
+    \begin{itemize}[leftmargin=0.05in, label={}, topsep=3pt]
+      \item \textbf{8,000+ GitHub stars in under 7 days.} Featured on \href{https://decrypt.co/362917/anthropic-accidentally-leaked-claude-code-source-internet-keeping-forever}{Decrypt.} A \textbf{Rust reimplementation of Claude Code's behavior} from its system prompt spec — better UI, \textbf{multi-provider support}, enhanced privacy, and more.
+    \end{itemize}
+    \vspace{0.7pt}
 
-\section*{Notable Courses}
-\resumeSubHeadingListStart
-  \item \href{https://cdn-uploads.huggingface.co/production/uploads/noauth/iD2BAETFKpkiYBWPVz1fn.webp}{\textbf{Hugging Face}: Fundamentals of Agents,}
-  \href{https://cdn-uploads.huggingface.co/production/uploads/noauth/WGIQW7LgmVhfRCtQc-uF7.webp}{MCP,}
-  \href{https://coursera.org/share/77d3cd60aa93257952e625e33d9f3bf6}{\textbf{Duke}: Explainable AI,}
-  \href{https://www.coursera.org/account/accomplishments/specialization/AS9JOBALFZSL}{\textbf{Google}: Data Analytics Professional,}
-  \href{https://www.cloudskillsboost.google/public_profiles/988acd6f-a370-42ec-a4e7-9101d225dc4b/badges/10543975}{Generative AI,}
-  \href{https://certificates.cs50.io/fe4b0a5a-c586-4a15-91ec-6b8a65f829e4.pdf?size=letter}{\textbf{Harvard University}: CS50x,}
-  \href{https://certificates.cs50.io/025b42e2-4fe7-4095-a3d8-0f2ef49e7b1c.pdf?size=letter}{CS50AI,}
-  \href{https://certificates.cs50.io/025b42e2-4fe7-4095-a3d8-0f2ef49e7b1c.pdf?size=letter}{\textbf{Anthropic}: MCP - Advanced Topics}
+  \resumeProjectHeading
+    {\textbf{\href{https://github.com/Kuberwastaken/backdooms}{The Backdooms}} $|$ \emph{\textcolor{skillgrey}{JavaScript, Canvas API, Code Minification, Compression Algorithms, DecompressionStream API}}}{}
+    \begin{itemize}[leftmargin=0.05in, label={}, topsep=3pt]
+      \item \textbf{Top Hacker News post for 3 days (600+ upvotes).} Covered by \href{https://www.pcgamer.com/hardware/behold-a-single-qr-code-containing-a-miniaturized-take-on-doom-literally-the-entire-game/}{PC Gamer} and \href{https://www.techspot.com/news/107642-doom-can-now-run-self-contained-qr-code.html}{TechSpot}, \textit{cited in an ex-NASA Scientist's research paper} \href{https://arxiv.org/pdf/2506.11008}{(arXiv:2506.11008)}. Ported a version of DOOM inspired by the Backrooms, \textbf{self-contained in a QR code}, with a \textbf{custom compression pipeline}.
+    \end{itemize}
+    \vspace{0.7pt}
+
+  \resumeProjectHeading
+    {\textbf{\href{https://github.com/kuberwastaken/meow}{.MEOW Image Format}} $|$ \emph{\textcolor{skillgrey}{Python, PNG Binary Spec, Custom Steganographic Encoding, JavaScript}}}{}
+    \begin{itemize}[leftmargin=0.05in, label={}, topsep=3pt]
+      \item \textbf{Reached Hacker News front page}, adopted \textbf{on-chain by two exchanges}, tokenized with \textbf{\$250k liquidity in 3 nights} — royalties funded my entire university tuition. Developed a \textbf{steganographic, PNG-compatible} image format with \textbf{650+ hidden bytes}.
+    \end{itemize}
+    \vspace{0.7pt}
+
+  \resumeProjectHeading
+    {\textbf{\href{https://clawx.kuber.studio}{ClawX}} $|$ \emph{\textcolor{skillgrey}{Next.js, AI Agent Skills, MCP, SSR, LLM APIs, Programmatic SEO}}}{}
+    \begin{itemize}[leftmargin=0.05in, label={}, topsep=3pt]
+      \item \textbf{85,000+ dynamically rendered pages.} \href{https://www.independent.co.uk/tech/moltbook-ai-reddit-social-media-chat-b2915460.html}{Featured by The Independent.} Built the human interface for \textbf{MoltBook} (Social Network for AI Agents), modelled after Twitter, with AI Agent browsing modes — doubles as a \textbf{pSEO aggregator}.
+    \end{itemize}
+    \vspace{-2pt}
+
 \resumeSubHeadingListEnd
+\end{small}
 
 \section*{Programming Skills}
 \resumeSubHeadingListStart
