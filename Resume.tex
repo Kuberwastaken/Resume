@@ -3,6 +3,7 @@
 \usepackage{cmap}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
+\usepackage[fontsize=10.5pt]{fontsize}
 \usepackage{fontawesome5}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -26,7 +27,7 @@
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       #1 & #2 \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{-3pt}
 }
 
 % Add thin grey underline to all hyperlinks
@@ -63,8 +64,8 @@
 \setlength{\tabcolsep}{0in}
 
 \titleformat{\section}{
-  \vspace{-5.6pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4.4pt}]
 
 \newcommand{\resumeItem}[2]{
   \item\small{
@@ -82,7 +83,7 @@
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 \renewcommand{\labelitemii}{$\circ$}
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*, itemsep=3pt, parsep=0pt, topsep=3.5pt]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
@@ -90,11 +91,11 @@
 \begin{document}
 
 \begin{center}
-  {\LARGE \textbf{Kuber Mehta}} \\[3pt]
+  {\LARGE \textbf{Kuber Mehta}} \\[2pt]
   \textbf{portfolio:} \href{https://kuber.studio}{kuber.studio} \\[2pt]
   \small \href{mailto:kuberhob@gmail.com}{kuberhob@gmail.com} \textbar\ \href{https://linkedin.com/in/kubermehta}{linkedin.com/in/kubermehta} \textbar\ \href{https://github.com/kuberwastaken}{github.com/kuberwastaken}
 \end{center}
-\vspace{2pt}
+\vspace{1pt}
 
 \section*{Education}
 \resumeSubHeadingListStart
@@ -109,16 +110,23 @@
 \section*{Experience}
 \resumeSubHeadingListStart
   \item
-    \textbf{\href{http://cdn.kuber.studio/assets/docs/AI-Summer-Internship.pdf}{Nas Company}} — \textit{AI Summer Resident-Intern} \hfill \textnormal{Dubai, UAE | Jul 2025 -- Aug 2025}
-    \vspace{-2pt}
-    \begin{itemize}[leftmargin=*, itemsep=1pt]
+    \textbf{\href{https://razorpay.com}{Razorpay}} — \textit{Central AI Initiatives (Founders Office)} \hfill \textnormal{Bengaluru, India | Jun 2026 -- Present}
+    \vspace{1pt}
+    \begin{itemize}[leftmargin=*, itemsep=0pt, topsep=1pt, partopsep=0pt]
+      \item Training \textbf{foundational autoregressive models} on payments data and finetuning \textbf{major open-source LLMs} for payments-specific context.
+      \item Building \textbf{org-wide and external AI applications}, working directly with the \textbf{CEO}, for an organization processing \textbf{35+ million payments daily}.
+    \end{itemize}
+  \item
+    \textbf{\href{http://cdn.kuber.studio/assets/docs/AI-Summer-Internship.pdf}{Nas Company}} — \textit{AI Summer Resident} \hfill \textnormal{Dubai, UAE | Jul 2025 -- Aug 2025}
+    \vspace{1pt}
+    \begin{itemize}[leftmargin=*, itemsep=0pt, topsep=1pt, partopsep=0pt]
       \item Handpicked as \textbf{1 of 8 AI Developers} from \textbf{18,000+ global applicants} by \textbf{Nuseir Yassin (Nas Daily)}.
-      \item Shipped \textbf{4 projects in 4 weeks}, including an experimental \textbf{AI finetuned on Religious Texts} for constrained philosophical voices. Learned \textbf{Growth and Content} while living in a \textbf{month-long Hacker Villa}.
+      \item Shipped \textbf{4 projects in 4 weeks}, including an experimental \textbf{AI finetuned on Religious Texts} for constrained philosophical voices.
     \end{itemize}
   \item
     \textbf{\href{https://www.perplexity.ai/business-fellowship}{Perplexity}} — \textit{AI Business Fellow} \hfill \textnormal{San Francisco, USA, Remote | Mar 2025 -- Aug 2025}
-    \vspace{-2pt}
-    \begin{itemize}[leftmargin=*, itemsep=1pt]
+    \vspace{1pt}
+    \begin{itemize}[leftmargin=*, itemsep=0pt, topsep=1pt, partopsep=0pt]
       \item Selected for a \textbf{competitive global fellowship} developing \textbf{AI strategy and GTM expertise} for Enterprise AI and mentored by \textbf{NVIDIA's Jensen Huang} and \textbf{Box's Aaron Levie}.
       \item Contributed to \textbf{AI monetization strategies} and \textbf{SLM deployment research} through GTM experiments for AI-driven knowledge work.
     \end{itemize}
@@ -129,11 +137,9 @@
 \begin{small}
 \resumeSubHeadingListStart
 
-\item\textbf{AI Venture Builder} — Founder of \textbf{\href{https://www.polyth.ink/}{PolyThink Labs}} (Building Generative UI for LLMs) and previously founded \textbf{TREAT AI}, (Open-Core ML platform with \textbf{40+ contributors} finetuning \textbf{25+ LLMs \& VLM Pipelines} for content safety).
+\item\textbf{AI Venture Builder} — Founder of \textbf{\href{https://www.polyth.ink/}{PolyThink Labs}} (Building Generative UI for LLMs) and previously founded \textbf{TREAT AI} (open-core platform working on media content safety — \textbf{acquired}).
 
 \item\textbf{\href{https://www.linkedin.com/feed/update/urn:li:activity:7322867944181399552/}{OpenAI OSS Model Closed feedback (APAC devs)}} — Shared insights working with \textbf{SLMs (Small Language Models)} on TREAT a call with \textbf{Sam Altman and the OpenAI team}, providing feedback on their \textbf{SOTA Open Weight models} \textbf{(GPT OSS 20B, 120B)}.
-
-\item \textbf{GitHub Copilot Backstage Pass Program} — Part of an \textbf{invite-only channel} with direct access to GitHub, \& Copilot teams and early access to \textbf{latest models and features} to test \& provide  feedback before releases. 
 
 \item \textbf{\href{https://playground.nothing.tech/lab}{Nothing Essential Lab Hackathon Winner}} — Tired of the Hacker News mobile experience, I built a \textbf{HN client as a Nothing Essential App} using official HN \& Algolia APIs. \textbf{Top 5 of 30,000+ participants}, won a Nothing Phone 3.
 
@@ -146,23 +152,23 @@
   \resumeProjectHeading
     {\textbf{\href{https://github.com/Kuberwastaken/claurst}{Claurst}} $|$ \textit{\textcolor{skillgrey}{Rust, TypeScript, Claude Code, Codex, Multi-Provider API Harnesses}}}{}
     \begin{itemize}[leftmargin=0.05in, label={}, topsep=3pt]
-      \item \textbf{8,000+ GitHub stars in under 7 days.} Featured on \href{https://decrypt.co/362917/anthropic-accidentally-leaked-claude-code-source-internet-keeping-forever}{Decrypt.} A \textbf{Rust reimplementation of Claude Code's behavior} from its system prompt spec — better UI, \textbf{multi-provider support}, enhanced privacy, and more.
+      \item \textbf{10,000+ GitHub stars.} Featured on \href{https://decrypt.co/362917/anthropic-accidentally-leaked-claude-code-source-internet-keeping-forever}{Decrypt.} The \textbf{most optimised TUI coding agent} — a \textbf{Rust-native binary} with \textbf{multi-provider support}, \textbf{custom modes}, enhanced privacy, and more.
     \end{itemize}
-    \vspace{0.7pt}
+    \vspace{0pt}
 
   \resumeProjectHeading
     {\textbf{\href{https://github.com/Kuberwastaken/backdooms}{The Backdooms}} $|$ \textit{\textcolor{skillgrey}{JavaScript, Canvas API, Code Minification, Compression Algorithms, DecompressionStream API}}}{}
     \begin{itemize}[leftmargin=0.05in, label={}, topsep=3pt]
       \item \textbf{Top Hacker News post for 3 days (600+ upvotes).} Covered by \href{https://www.pcgamer.com/hardware/behold-a-single-qr-code-containing-a-miniaturized-take-on-doom-literally-the-entire-game/}{PC Gamer} and \href{https://www.techspot.com/news/107642-doom-can-now-run-self-contained-qr-code.html}{TechSpot}, \textit{cited in an ex-NASA Scientist's research paper} \href{https://arxiv.org/pdf/2506.11008}{(arXiv:2506.11008)}. Ported a version of DOOM inspired by the Backrooms, \textbf{self-contained in a QR code}, with a \textbf{custom compression pipeline}.
     \end{itemize}
-    \vspace{0.7pt}
+    \vspace{0pt}
 
   \resumeProjectHeading
     {\textbf{\href{https://github.com/kuberwastaken/meow}{.MEOW Image Format}} $|$ \textit{\textcolor{skillgrey}{Python, PNG Binary Spec, Custom Steganographic Encoding, JavaScript}}}{}
     \begin{itemize}[leftmargin=0.05in, label={}, topsep=3pt]
       \item \textbf{Reached Hacker News front page}, adopted \textbf{on-chain by two exchanges}, tokenized with \textbf{\$250k liquidity in 3 nights} — royalties funded my entire university tuition. Developed a \textbf{steganographic, PNG-compatible} image format with \textbf{650+ hidden bytes}.
     \end{itemize}
-    \vspace{0.7pt}
+    \vspace{0pt}
 
   \resumeProjectHeading
     {\textbf{\href{https://clawx.kuber.studio}{ClawX}} $|$ \textit{\textcolor{skillgrey}{Next.js, AI Agent Skills, MCP, SSR, LLM APIs, Programmatic SEO}}}{}
