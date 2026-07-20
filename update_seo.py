@@ -38,6 +38,7 @@ def update_seo():
         text = re.sub(r'\\textbf\{([^{}]+)\}', r'<strong>\1</strong>', text)
         text = re.sub(r'\\textit\{([^{}]+)\}', r'<em>\1</em>', text)
         text = re.sub(r'\\textnormal\{([^{}]+)\}', r'\1', text)
+        text = re.sub(r'\\textcolor\{[^{}]+\}\{([^{}]+)\}', r'\1', text)
         text = re.sub(r'\\small\{([^{}]+)\}', r'\1', text)
         text = re.sub(r'\\large\{([^{}]+)\}', r'\1', text)
         text = re.sub(r'\\LARGE\{([^{}]+)\}', r'\1', text)
@@ -46,11 +47,17 @@ def update_seo():
     # 4.5. Remove spacing & environment commands completely including their arguments
     text = re.sub(r'\\begin\{center\}', '', text)
     text = re.sub(r'\\end\{center\}', '', text)
-    text = re.sub(r'\\begin\s*\{[^}]+\}', '', text)
+    # itemize environments become lists; consume their [leftmargin=...] option blocks
+    text = re.sub(r'\\begin\{itemize\}\s*(?:\[[^\]]*\])?', '<ul>', text)
+    text = re.sub(r'\\end\{itemize\}', '</ul>', text)
+    text = re.sub(r'\\begin\s*\{[^}]+\}\s*(?:\[[^\]]*\])?', '', text)
     text = re.sub(r'\\end\s*\{[^}]+\}', '', text)
     text = re.sub(r'\\vspace\s*\{[^}]*\}', '', text)
     text = re.sub(r'\\hfill', '', text)
     text = re.sub(r'\\hspace\s*\{[^}]*\}', '', text)
+    # Math-mode and text-mode pipe separators
+    text = text.replace('$|$', ' | ')
+    text = text.replace(r'\textbar', ' | ')
     # Remove any linebreaks with optional length arguments like \\[3pt]
     text = re.sub(r'\\\\\s*\[[^\]]+\]', '<br>', text)
 
@@ -68,10 +75,6 @@ def update_seo():
                   r'<li><strong>\1:</strong> \2</li>', text)
                   
     # 7. Lists
-    text = text.replace(r'\begin{itemize}[leftmargin=*, itemsep=1pt]', '<ul>')
-    text = text.replace(r'\begin{itemize}[leftmargin=*]', '<ul>')
-    text = text.replace(r'\begin{itemize}', '<ul>')
-    text = text.replace(r'\end{itemize}', '</ul>')
     text = text.replace(r'\resumeSubHeadingListStart', '<ul>')
     text = text.replace(r'\resumeSubHeadingListEnd', '</ul>')
     text = text.replace(r'\resumeItemListStart', '<ul>')
@@ -94,6 +97,20 @@ def update_seo():
     text = text.replace('---', '&mdash;')
     text = text.replace('--', '&ndash;')
     
+    # 9.5. Normalize tech names and spelling for clean ATS parsing
+    for wrong, right in [
+        (r'\bJavascript\b', 'JavaScript'),
+        (r'\bTypescript\b', 'TypeScript'),
+        (r'\bPytorch\b', 'PyTorch'),
+        (r'\bLUA\b', 'Lua'),
+        (r'\bNextJS\b', 'Next.js'),
+        (r'\bNodeJS\b', 'Node.js'),
+        (r'\bfinetuned\b', 'fine-tuned'),
+        (r'\bfinetuning\b', 'fine-tuning'),
+    ]:
+        text = re.sub(wrong, right, text)
+    text = re.sub(r'[ \t]{2,}', ' ', text)
+
     # 10. Clean up text and convert to lines
     lines = []
     for line in text.split('\n'):
