@@ -1,0 +1,40 @@
+name: Build Resume
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - Resume.tex
+      - update_seo.py
+      - .github/workflows/build-resume.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compile Resume.tex
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: Resume.tex
+
+      - name: Regenerate SEO block in index.html
+        run: python3 update_seo.py
+
+      - name: Commit rebuilt PDF and SEO content
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Resume.pdf index.html
+          if git diff --cached --quiet; then
+            echo "Nothing changed, skipping commit."
+          else
+            git commit -m "chore: rebuild Resume.pdf and regenerate SEO content [auto]"
+            git pull --rebase
+            git push
+          fi
