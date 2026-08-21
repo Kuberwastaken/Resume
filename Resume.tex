@@ -43,7 +43,7 @@
 \renewcommand{\href}[2]{\oldhref{#1}{\textcolor{linknavy}{\uline{#2}}}}
 
 \usepackage{setspace}
-\setstretch{1.02}   % try 1.03–1.10 for small, clean spacing increase
+\setstretch{1.0}   % try 1.03–1.10 for small, clean spacing increase
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -64,8 +64,8 @@
 \setlength{\tabcolsep}{0in}
 
 \titleformat{\section}{
-  \vspace{-6pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-4.4pt}]
+  \vspace{-8pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5.5pt}]
 
 \newcommand{\resumeItem}[2]{
   \item\small{
@@ -83,7 +83,7 @@
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 \renewcommand{\labelitemii}{$\circ$}
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*, itemsep=3pt, parsep=0pt, topsep=3.5pt]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*, itemsep=2pt, parsep=0pt, topsep=2.5pt]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
@@ -151,28 +151,28 @@
 
   \resumeProjectHeading
     {\textbf{\href{https://github.com/Kuberwastaken/claurst}{Claurst}} $|$ \textit{\textcolor{skillgrey}{Rust, TypeScript, Claude Code, Codex, Multi-Provider API Harnesses}}}{}
-    \begin{itemize}[leftmargin=0.05in, label={}, topsep=3pt]
+    \begin{itemize}[leftmargin=0.05in, label={}, topsep=2pt]
       \item \textbf{10,000+ GitHub stars.} Featured on \href{https://decrypt.co/362917/anthropic-accidentally-leaked-claude-code-source-internet-keeping-forever}{Decrypt}, taught in a \href{https://cse.msu.edu/~chanken1/documents/lectures/minilecture_series_26/modern_llm.pdf}{Michigan State University lecture}. The \textbf{most optimised TUI coding agent} — a \textbf{Rust-native binary} with multi-provider support, custom modes, enhanced privacy, and more.
     \end{itemize}
     \vspace{0pt}
 
   \resumeProjectHeading
     {\textbf{\href{https://github.com/Kuberwastaken/backdooms}{The Backdooms}} $|$ \textit{\textcolor{skillgrey}{JavaScript, Canvas API, Code Minification, Compression Algorithms, DecompressionStream API}}}{}
-    \begin{itemize}[leftmargin=0.05in, label={}, topsep=3pt]
+    \begin{itemize}[leftmargin=0.05in, label={}, topsep=2pt]
       \item \textbf{Top Hacker News post for 3 days (600+ upvotes).} Covered by \href{https://www.pcgamer.com/hardware/behold-a-single-qr-code-containing-a-miniaturized-take-on-doom-literally-the-entire-game/}{PC Gamer} and \href{https://www.techspot.com/news/107642-doom-can-now-run-self-contained-qr-code.html}{TechSpot}, \textit{cited in an ex-NASA Scientist's research paper} \href{https://arxiv.org/pdf/2506.11008}{(arXiv:2506.11008)}. Ported a version of DOOM inspired by the Backrooms, \textbf{self-contained in a QR code}, with a custom compression pipeline.
     \end{itemize}
     \vspace{0pt}
 
   \resumeProjectHeading
     {\textbf{\href{https://github.com/kuberwastaken/meow}{.MEOW Image Format}} $|$ \textit{\textcolor{skillgrey}{Python, PNG Binary Spec, Custom Steganographic Encoding, JavaScript}}}{}
-    \begin{itemize}[leftmargin=0.05in, label={}, topsep=3pt]
+    \begin{itemize}[leftmargin=0.05in, label={}, topsep=2pt]
       \item \textbf{Reached Hacker News front page}, adopted \textbf{on-chain by two exchanges}, tokenized with \textbf{\$250k liquidity in 3 nights} — royalties funded my entire university tuition. Developed a steganographic, PNG-compatible image format with 650+ hidden bytes.
     \end{itemize}
     \vspace{0pt}
 
   \resumeProjectHeading
     {\textbf{\href{https://github.com/Kuberwastaken/hp-laser-1008a-macos}{Native macOS Driver for a Windows-Only HP Printer}} $|$ \textit{\textcolor{skillgrey}{C++, CUPS, SpliX, IOKit, Reverse Engineering, Claude Code}}}{}
-    \begin{itemize}[leftmargin=0.05in, label={}, topsep=3pt]
+    \begin{itemize}[leftmargin=0.05in, label={}, topsep=2pt]
       \item \textbf{3.5M+ views, \href{https://x.com/kuberwastaken/status/2089377982536388964}{\#1 trending on X}.} Covered by \href{https://www.tomshardware.com/tech-industry/artificial-intelligence/dev-uses-claude-ai-to-create-native-macos-driver-for-obscure-windows-only-printer-linux-container-hack-enables-system-wide-cmd-p-printing-driver-now-available-on-github}{Tom's Hardware}, \href{https://www.theregister.com/ai-and-ml/2026/08/19/dev-taps-claude-code-to-craft-custom-printer-driver-for-macos/5289875}{The Register} and more. A \textbf{native Apple Silicon driver} for the Windows-only \textbf{HP Laser 1008a} — reverse-engineered Samsung's raster path, patched \textbf{SpliX}, wrote an \textbf{IOKit USB helper} to print with Cmd + P, in \href{https://cdn.kuber.studio/chat/hp-laser-1008a-driver}{a single 4-hour Claude Code session}.
     \end{itemize}
     \vspace{-2pt}
