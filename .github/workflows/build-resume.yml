@@ -12,6 +12,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: build-resume
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
