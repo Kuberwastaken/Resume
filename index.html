@@ -110,5 +110,20 @@
     </div>
     <!-- SEO_CONTENT_END -->
     <iframe src="Resume.pdf"></iframe>
+    <!-- Invisible resume-view/download beacon: fire-and-forget GET to the Apps Script tracker. No UI changes. -->
+    <script>
+    (function () {
+      try {
+        var q = 'r=' + encodeURIComponent(document.referrer || '') +
+                '&ua=' + encodeURIComponent(navigator.userAgent) +
+                '&lang=' + encodeURIComponent(navigator.language || '') +
+                '&tz=' + encodeURIComponent(String(new Date().getTimezoneOffset())) +
+                '&scr=' + encodeURIComponent(screen.width + 'x' + screen.height) +
+                '&pg=' + encodeURIComponent(location.pathname);
+        fetch('https://script.google.com/macros/s/AKfycbzQXTpfY0JrUaaUvzgjz7MHOlIpz_yXxKi0hiqEw1Mivt4oKhuzHG2aE0TghlfvVpDOag/exec?' + q, { mode: 'no-cors', credentials: 'omit', cache: 'no-store' }).catch(function () {});
+      } catch (e) {}
+    })();
+    </script>
+
 </body>
 </html>
